@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwYjFhNDUiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggZD0iTTEwMCA4IDQwIDI2djg4YzAgNDYgMjggNzggNjAgOTYgMzItMTggNjAtNTAgNjAtOTZWMjZ6Ii8+CjxwYXRoIGQ9Ik0xMDAgMTggNTAgMzN2ODBjMCAzOCAyMiA2NiA1MCA4MiAyOC0xNiA1MC00NCA1MC04MlYzM3oiIHN0cm9rZS13aWR0aD0iMSIvPgo8cGF0aCBkPSJNNjIgNjIgMTAwIDQ0bDM4IDE4ek02NiA2Nmg2OCIvPgo8cmVjdCB4PSI2OSIgeT0iNzAiIHdpZHRoPSI2IiBoZWlnaHQ9IjQyIi8+CjxyZWN0IHg9IjgxIiB5PSI3MCIgd2lkdGg9IjYiIGhlaWdodD0iNDIiLz4KPHJlY3QgeD0iOTMiIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cmVjdCB4PSIxMDUiIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cmVjdCB4PSIxMTciIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cmVjdCB4PSIxMjkiIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cGF0aCBkPSJNNjQgMTE0aDcyTTYwIDExOWg4MCIvPgo8cGF0aCBkPSJNMTAwIDEzNmMtMTItNi0yNi03LTQwLTN2MzRjMTQtNCAyOC0zIDQwIDMgMTItNiAyNi03IDQwLTN2LTM0Yy0xNC00LTI4LTMtNDAgM3pNMTAwIDEzNnYzNCIvPgo8cGF0aCBkPSJNNjYgMTQyYzktMSAxOSAwIDI4IDNNNjYgMTUwYzktMSAxOSAwIDI4IDNNNjYgMTU4YzktMSAxOSAwIDI4IDNNMTM0IDE0MmMtOS0xLTE5IDAtMjggM00xMzQgMTUwYy05LTEtMTkgMC0yOCAzTTEzNCAxNThjLTktMS0xOSAwLTI4IDMiIHN0cm9rZS13aWR0aD0iMSIvPgo8cGF0aCBkPSJNNTIuMCAzMC4wIEwzOC45IDUxLjIgTDI5LjUgNzIuNSBMMjMuOSA5My44IEwyMi4wIDExNS4wIEwyMy45IDEzNi4yIEwyOS41IDE1Ny41IEwzOC45IDE3OC44IEw1Mi4wIDIwMC4wIiBzdHJva2Utd2lkdGg9IjEuNCIvPgo8ZWxsaXBzZSBjeD0iNDcuOSIgY3k9IjQ2LjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSA0Ny45IDQ2LjIpIi8+CjxlbGxpcHNlIGN4PSIyOS45IiBjeT0iNDYuMiIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMjkuOSA0Ni4yKSIvPgo8ZWxsaXBzZSBjeD0iMzguNSIgY3k9IjY3LjUiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAzOC41IDY3LjUpIi8+CjxlbGxpcHNlIGN4PSIyMC41IiBjeT0iNjcuNSIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMjAuNSA2Ny41KSIvPgo8ZWxsaXBzZSBjeD0iMzIuOSIgY3k9Ijg4LjgiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAzMi45IDg4LjgpIi8+CjxlbGxpcHNlIGN4PSIxNC45IiBjeT0iODguOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTQuOSA4OC44KSIvPgo8ZWxsaXBzZSBjeD0iMzEuMCIgY3k9IjExMC4wIiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgMzEuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjEzLjAiIGN5PSIxMTAuMCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTMuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjMyLjkiIGN5PSIxMzEuMiIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDMyLjkgMTMxLjIpIi8+CjxlbGxpcHNlIGN4PSIxNC45IiBjeT0iMTMxLjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDE0LjkgMTMxLjIpIi8+CjxlbGxpcHNlIGN4PSIzOC41IiBjeT0iMTUyLjUiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAzOC41IDE1Mi41KSIvPgo8ZWxsaXBzZSBjeD0iMjAuNSIgY3k9IjE1Mi41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAyMC41IDE1Mi41KSIvPgo8ZWxsaXBzZSBjeD0iNDcuOSIgY3k9IjE3My44IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgNDcuOSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjI5LjkiIGN5PSIxNzMuOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMjkuOSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjYxLjAiIGN5PSIxOTUuMCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDYxLjAgMTk1LjApIi8+CjxlbGxpcHNlIGN4PSI0My4wIiBjeT0iMTk1LjAiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDQzLjAgMTk1LjApIi8+CjxwYXRoIGQ9Ik0xNDguMCAzMC4wIEwxNjEuMSA1MS4yIEwxNzAuNSA3Mi41IEwxNzYuMSA5My44IEwxNzguMCAxMTUuMCBMMTc2LjEgMTM2LjIgTDE3MC41IDE1Ny41IEwxNjEuMSAxNzguOCBMMTQ4LjAgMjAwLjAiIHN0cm9rZS13aWR0aD0iMS40Ii8+CjxlbGxpcHNlIGN4PSIxNTIuMSIgY3k9IjQ2LjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDE1Mi4xIDQ2LjIpIi8+CjxlbGxpcHNlIGN4PSIxNzAuMSIgY3k9IjQ2LjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAxNzAuMSA0Ni4yKSIvPgo8ZWxsaXBzZSBjeD0iMTYxLjUiIGN5PSI2Ny41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAxNjEuNSA2Ny41KSIvPgo8ZWxsaXBzZSBjeD0iMTc5LjUiIGN5PSI2Ny41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgMTc5LjUgNjcuNSkiLz4KPGVsbGlwc2UgY3g9IjE2Ny4xIiBjeT0iODguOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTY3LjEgODguOCkiLz4KPGVsbGlwc2UgY3g9IjE4NS4xIiBjeT0iODguOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDE4NS4xIDg4LjgpIi8+CjxlbGxpcHNlIGN4PSIxNjkuMCIgY3k9IjExMC4wIiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAxNjkuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjE4Ny4wIiBjeT0iMTEwLjAiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAxODcuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjE2Ny4xIiBjeT0iMTMxLjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDE2Ny4xIDEzMS4yKSIvPgo8ZWxsaXBzZSBjeD0iMTg1LjEiIGN5PSIxMzEuMiIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDE4NS4xIDEzMS4yKSIvPgo8ZWxsaXBzZSBjeD0iMTYxLjUiIGN5PSIxNTIuNSIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTYxLjUgMTUyLjUpIi8+CjxlbGxpcHNlIGN4PSIxNzkuNSIgY3k9IjE1Mi41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgMTc5LjUgMTUyLjUpIi8+CjxlbGxpcHNlIGN4PSIxNTIuMSIgY3k9IjE3My44IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAxNTIuMSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjE3MC4xIiBjeT0iMTczLjgiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAxNzAuMSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjEzOS4wIiBjeT0iMTk1LjAiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDEzOS4wIDE5NS4wKSIvPgo8ZWxsaXBzZSBjeD0iMTU3LjAiIGN5PSIxOTUuMCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDE1Ny4wIDE5NS4wKSIvPgo8L3N2Zz4="
+    />
+    <title>Victory College, Ikare Akoko | Make a Pledge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #0b1a45;
+        --navy2: #132760;
+        --navy3: #081235;
+        --white: #fff;
+        --mist: #edf1fa;
+        --line: #d5daea;
+        --ink: #0b1a45;
+        --muted: #4a5580;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Karla", sans-serif;
+        color: var(--ink);
+        background: var(--white);
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        color: var(--navy);
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      /* header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+      }
+      .bar {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .brand svg {
+        width: 34px;
+        height: 38px;
+      }
+      .brand b {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 1.1;
+        color: var(--navy);
+      }
+      .brand small {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        color: var(--muted);
+        font-weight: 700;
+      }
+      nav {
+        display: flex;
+        gap: 22px;
+      }
+      nav a {
+        font-size: 13px;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+      }
+      nav a.on {
+        color: var(--navy);
+        font-weight: 700;
+        border-color: var(--navy);
+      }
+      /* hero */
+      .hero {
+        position: relative;
+        background: linear-gradient(160deg, var(--navy3), var(--navy2));
+        color: var(--white);
+        text-align: center;
+        padding: 90px 20px 100px;
+        overflow: hidden;
+      }
+      .hero .crest {
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+        width: 300px;
+        opacity: 0.14;
+      }
+      .hero .col {
+        position: absolute;
+        bottom: 0;
+        width: 120px;
+        height: 75%;
+        opacity: 0.1;
+        background: repeating-linear-gradient(
+          90deg,
+          #fff 0 3px,
+          transparent 3px 14px
+        );
+      }
+      .hero .col.l {
+        left: 0;
+      }
+      .hero .col.r {
+        right: 0;
+      }
+      .hero > *:not(.crest):not(.col) {
+        position: relative;
+      }
+      .tag {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: #c9d2ee;
+        text-transform: uppercase;
+      }
+      .hero h1 {
+        color: var(--white);
+        font-size: clamp(44px, 8vw, 72px);
+        line-height: 1.05;
+        margin: 18px 0;
+      }
+      .hero p {
+        max-width: 520px;
+        margin: 0 auto 30px;
+        color: #dbe2f6;
+        font-size: 15px;
+      }
+      .btns {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 3px;
+        font:
+          700 13px "Karla",
+          sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid var(--navy);
+        background: var(--navy);
+        color: var(--white);
+      }
+      .btn.light {
+        background: var(--white);
+        color: var(--navy);
+        border-color: var(--white);
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--white);
+        border-color: #9fb0e0;
+      }
+      .btn.out {
+        background: var(--white);
+        color: var(--navy);
+        border-color: #9fb0e0;
+      }
+      .btn:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      select:focus-visible {
+        outline: 3px solid #6f86d6;
+        outline-offset: 2px;
+      }
+      .facts {
+        background: var(--mist);
+        border-bottom: 1px solid var(--line);
+        padding: 34px 0;
+      }
+      .facts .wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .facts small {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .facts p {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        color: var(--navy);
+      }
+      .facts .btns {
+        grid-column: 1/-1;
+        justify-content: flex-start;
+      }
+      /* sections */
+      section.blk {
+        padding: 64px 0;
+      }
+      section.alt {
+        background: var(--mist);
+      }
+      .rule {
+        width: 48px;
+        height: 1px;
+        background: var(--navy);
+        margin: 14px 0 22px;
+        opacity: 0.6;
+      }
+      h2 {
+        font-size: 34px;
+        line-height: 1.2;
+      }
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: var(--muted);
+      }
+      .copy p {
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+      .narrow {
+        max-width: 560px;
+      }
+      .link {
+        font-weight: 700;
+        font-size: 13px;
+        border-bottom: 1px solid var(--navy);
+        text-decoration: none;
+        color: var(--navy);
+      }
+      .dark {
+        background: linear-gradient(160deg, var(--navy3), var(--navy2));
+        color: var(--white);
+        padding: 70px 0;
+      }
+      .dark h2 {
+        color: var(--white);
+      }
+      .dark .eyebrow {
+        color: #c9d2ee;
+      }
+      .cats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 12px;
+        margin-top: 26px;
+      }
+      .cats div {
+        border: 1px solid #3a4f95;
+        padding: 14px 16px;
+        border-radius: 4px;
+      }
+      .cats b {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        font-weight: 500;
+        display: block;
+      }
+      .cats span {
+        font-size: 13px;
+        color: #c9d2ee;
+      }
+      /* page hero */
+      .phero {
+        background: linear-gradient(160deg, var(--navy3), var(--navy2));
+        color: var(--white);
+        padding: 60px 0 56px;
+      }
+      .phero h1 {
+        color: var(--white);
+        font-size: clamp(32px, 5vw, 46px);
+        margin: 12px 0;
+      }
+      .phero p {
+        color: #dbe2f6;
+        max-width: 520px;
+        font-weight: 500;
+      }
+      .phero .eyebrow {
+        color: #c9d2ee;
+      }
+      ul.dots {
+        margin-left: 18px;
+        color: var(--muted);
+      }
+      ul.dots li {
+        margin-bottom: 8px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+      }
+      .card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 20px;
+        font-size: 14px;
+        color: var(--navy);
+      }
+      .note {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 18px;
+      }
+      .cards2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .cards2 .card {
+        padding: 16px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .table {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .table div {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 16px 18px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .table div:nth-child(even) {
+        background: var(--mist);
+      }
+      .table b {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+        font-weight: 500;
+        color: var(--navy);
+      }
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .pills span {
+        border: 1px solid #b9c3e3;
+        border-radius: 99px;
+        padding: 6px 14px;
+        font-size: 13px;
+        color: var(--navy);
+        background: var(--white);
+      }
+      .deadline {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 24px;
+        margin: 34px 0;
+      }
+      .deadline h3 {
+        font-size: 24px;
+        margin: 8px 0;
+      }
+      .deadline p {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      /* form */
+      .step {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .fh {
+        font-size: 28px;
+        margin: 4px 0 6px;
+      }
+      .hint {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+      .grp {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 22px 0 10px;
+      }
+      .opts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .opts.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .opt {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 11px 14px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        background: var(--white);
+      }
+      .opt small {
+        display: block;
+        font-weight: 400;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .opt i {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #9aa6cf;
+        border-radius: 50%;
+        flex: none;
+      }
+      .opt input {
+        position: absolute;
+        opacity: 0;
+      }
+      .opt:has(input:checked) {
+        border-color: var(--navy);
+        background: var(--mist);
+      }
+      .opt:has(input:checked) i {
+        background: var(--navy);
+        box-shadow: inset 0 0 0 3px #fff;
+      }
+      .opt:has(input:focus-visible) {
+        outline: 3px solid #6f86d6;
+      }
+      .opt.full {
+        grid-column: 1/-1;
+      }
+      label.f {
+        display: block;
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 3px;
+        padding: 11px 12px;
+        font:
+          14px "Karla",
+          sans-serif;
+        color: var(--navy);
+      }
+      textarea {
+        min-height: 90px;
+      }
+      .two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+      .fs {
+        margin-top: 44px;
+      }
+      .bank {
+        border: 1px solid #a9b4dc;
+        border-radius: 4px;
+        padding: 20px;
+        margin: 14px 0;
+      }
+      .bank .eyebrow {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .bank h3 {
+        font-size: 22px;
+      }
+      .bank p {
+        font-size: 13px;
+      }
+      .bank strong {
+        display: block;
+        font-size: 17px;
+        margin: 4px 0 12px;
+        color: var(--navy);
+      }
+      .dl {
+        background: var(--mist);
+        padding: 13px 16px;
+        border-radius: 3px;
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+      .proof {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 18px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .proof b {
+        color: var(--navy);
+        display: block;
+        margin-bottom: 6px;
+      }
+      .submit {
+        margin-top: 34px;
+        padding-top: 26px;
+        border-top: 1px solid var(--line);
+      }
+      .submit .btn {
+        padding: 14px 26px;
+        font-size: 14px;
+      }
+      .submit .btn[disabled] {
+        opacity: 0.55;
+        cursor: wait;
+      }
+      #msg {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border-radius: 3px;
+        font-size: 14px;
+        display: none;
+      }
+      #msg.ok {
+        display: block;
+        background: var(--mist);
+        border: 1px solid var(--navy);
+        color: var(--navy);
+      }
+      #msg.bad {
+        display: block;
+        background: #fff;
+        border: 1px solid var(--navy);
+        color: var(--navy);
+        font-weight: 700;
+      }
+      .talk {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 24px;
+        margin-top: 44px;
+      }
+      .talk h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+      .talk p {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+      /* contact */
+      .cgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .cbox {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 20px;
+      }
+      .cbox small {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: var(--muted);
+        display: block;
+        margin-bottom: 12px;
+      }
+      .cbox p {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        color: var(--navy);
+        margin-bottom: 6px;
+      }
+      .cbox a {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 6px;
+        color: var(--navy);
+        text-decoration: none;
+        word-break: break-all;
+      }
+      .cbox.wide {
+        grid-column: 1/-1;
+        background: var(--mist);
+      }
+      /* footer */
+      footer {
+        background: linear-gradient(160deg, var(--navy3), var(--navy2));
+        color: var(--white);
+        padding: 56px 0 0;
+        font-size: 13px;
+      }
+      footer .wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 860px;
+      }
+      footer h4 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      footer small {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: #c9d2ee;
+        margin-bottom: 12px;
+      }
+      footer p {
+        color: #c9d2ee;
+        margin-bottom: 5px;
+      }
+      footer a {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 5px;
+        text-decoration: none;
+        word-break: break-all;
+      }
+      footer .copy {
+        grid-column: 1/-1;
+        border-top: 1px solid #2b3f80;
+        margin-top: 30px;
+        padding: 18px 0;
+        text-align: center;
+        font-size: 11px;
+        color: #c9d2ee;
+      }
+      .page {
+        display: none;
+      }
+      .page.show {
+        display: block;
+      }
+      @media (max-width: 640px) {
+        .facts .wrap,
+        footer .wrap,
+        .cgrid,
+        .opts,
+        .opts.three,
+        .two,
+        .cards2 {
+          grid-template-columns: 1fr;
+        }
+        nav {
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+        .hero {
+          padding: 70px 20px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      .brand img {
+        width: 34px;
+        height: 38px;
+      }
+      .hero .crest {
+        filter: none;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+      .tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 16px 0;
+      }
+      .tab {
+        border: 1px solid var(--line);
+        background: #fff;
+        padding: 9px 16px;
+        border-radius: 99px;
+        font:
+          700 13px "Karla",
+          sans-serif;
+        color: var(--navy);
+        cursor: pointer;
+      }
+      .tab[aria-selected="true"] {
+        background: var(--navy);
+        color: #fff;
+        border-color: var(--navy);
+      }
+      .tab:focus-visible {
+        outline: 3px solid #6f86d6;
+        outline-offset: 2px;
+      }
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .tile {
+        position: relative;
+        display: block;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 14px 16px;
+        cursor: pointer;
+        background: #fff;
+      }
+      .tile input {
+        position: absolute;
+        opacity: 0;
+      }
+      .tile b {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+        font-weight: 500;
+        color: var(--navy);
+      }
+      .tile small {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .tile:hover {
+        border-color: #9aa6cf;
+      }
+      .tile:has(input:checked) {
+        border-color: var(--navy);
+        background: var(--mist);
+        box-shadow: inset 0 0 0 1px var(--navy);
+      }
+      .tile:has(input:focus-visible) {
+        outline: 3px solid #6f86d6;
+      }
+      .chosen {
+        margin-top: 14px;
+        font-size: 14px;
+        color: var(--navy);
+        font-weight: 700;
+      }
+      .chk {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        color: var(--navy);
+        cursor: pointer;
+      }
+      .chk input {
+        width: 18px;
+        height: 18px;
+        accent-color: #0b1a45;
+      }
+      .thanks {
+        border: 1px solid var(--navy);
+        border-radius: 4px;
+        padding: 36px 28px;
+        text-align: center;
+        background: var(--mist);
+      }
+      .thanks h2 {
+        font-size: 36px;
+      }
+      .thanks .btns {
+        justify-content: center;
+      }
+      .sum {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        margin-top: 20px;
+        text-align: left;
+      }
+      .sum div {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 10px 16px;
+        font-size: 13px;
+        border-bottom: 1px solid var(--line);
+      }
+      .sum div:last-child {
+        border: 0;
+      }
+      .sum span {
+        color: var(--muted);
+      }
+      .sum b {
+        color: var(--navy);
+        text-align: right;
+        word-break: break-word;
+      }
+      @media (max-width: 640px) {
+        .tiles {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .chosenrow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+      .chosenrow .chosen {
+        margin: 0;
+      }
+      .clr {
+        padding: 8px 16px;
+        border-color: #b9c3e3;
+        font-size: 12px;
+      }
+
+      .alert {
+        background: var(--mist);
+        border: 1px solid var(--navy);
+        border-left: 5px solid var(--navy);
+        border-radius: 3px;
+        padding: 12px 16px;
+        margin: 10px 0 4px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      #step1 {
+        scroll-margin-top: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <a class="brand" href="index.html" style="color: var(--navy)"
+          ><img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwYjFhNDUiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggZD0iTTEwMCA4IDQwIDI2djg4YzAgNDYgMjggNzggNjAgOTYgMzItMTggNjAtNTAgNjAtOTZWMjZ6Ii8+CjxwYXRoIGQ9Ik0xMDAgMTggNTAgMzN2ODBjMCAzOCAyMiA2NiA1MCA4MiAyOC0xNiA1MC00NCA1MC04MlYzM3oiIHN0cm9rZS13aWR0aD0iMSIvPgo8cGF0aCBkPSJNNjIgNjIgMTAwIDQ0bDM4IDE4ek02NiA2Nmg2OCIvPgo8cmVjdCB4PSI2OSIgeT0iNzAiIHdpZHRoPSI2IiBoZWlnaHQ9IjQyIi8+CjxyZWN0IHg9IjgxIiB5PSI3MCIgd2lkdGg9IjYiIGhlaWdodD0iNDIiLz4KPHJlY3QgeD0iOTMiIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cmVjdCB4PSIxMDUiIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cmVjdCB4PSIxMTciIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cmVjdCB4PSIxMjkiIHk9IjcwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0MiIvPgo8cGF0aCBkPSJNNjQgMTE0aDcyTTYwIDExOWg4MCIvPgo8cGF0aCBkPSJNMTAwIDEzNmMtMTItNi0yNi03LTQwLTN2MzRjMTQtNCAyOC0zIDQwIDMgMTItNiAyNi03IDQwLTN2LTM0Yy0xNC00LTI4LTMtNDAgM3pNMTAwIDEzNnYzNCIvPgo8cGF0aCBkPSJNNjYgMTQyYzktMSAxOSAwIDI4IDNNNjYgMTUwYzktMSAxOSAwIDI4IDNNNjYgMTU4YzktMSAxOSAwIDI4IDNNMTM0IDE0MmMtOS0xLTE5IDAtMjggM00xMzQgMTUwYy05LTEtMTkgMC0yOCAzTTEzNCAxNThjLTktMS0xOSAwLTI4IDMiIHN0cm9rZS13aWR0aD0iMSIvPgo8cGF0aCBkPSJNNTIuMCAzMC4wIEwzOC45IDUxLjIgTDI5LjUgNzIuNSBMMjMuOSA5My44IEwyMi4wIDExNS4wIEwyMy45IDEzNi4yIEwyOS41IDE1Ny41IEwzOC45IDE3OC44IEw1Mi4wIDIwMC4wIiBzdHJva2Utd2lkdGg9IjEuNCIvPgo8ZWxsaXBzZSBjeD0iNDcuOSIgY3k9IjQ2LjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSA0Ny45IDQ2LjIpIi8+CjxlbGxpcHNlIGN4PSIyOS45IiBjeT0iNDYuMiIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMjkuOSA0Ni4yKSIvPgo8ZWxsaXBzZSBjeD0iMzguNSIgY3k9IjY3LjUiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAzOC41IDY3LjUpIi8+CjxlbGxpcHNlIGN4PSIyMC41IiBjeT0iNjcuNSIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMjAuNSA2Ny41KSIvPgo8ZWxsaXBzZSBjeD0iMzIuOSIgY3k9Ijg4LjgiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAzMi45IDg4LjgpIi8+CjxlbGxpcHNlIGN4PSIxNC45IiBjeT0iODguOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTQuOSA4OC44KSIvPgo8ZWxsaXBzZSBjeD0iMzEuMCIgY3k9IjExMC4wIiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgMzEuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjEzLjAiIGN5PSIxMTAuMCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTMuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjMyLjkiIGN5PSIxMzEuMiIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDMyLjkgMTMxLjIpIi8+CjxlbGxpcHNlIGN4PSIxNC45IiBjeT0iMTMxLjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDE0LjkgMTMxLjIpIi8+CjxlbGxpcHNlIGN4PSIzOC41IiBjeT0iMTUyLjUiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAzOC41IDE1Mi41KSIvPgo8ZWxsaXBzZSBjeD0iMjAuNSIgY3k9IjE1Mi41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAyMC41IDE1Mi41KSIvPgo8ZWxsaXBzZSBjeD0iNDcuOSIgY3k9IjE3My44IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgNDcuOSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjI5LjkiIGN5PSIxNzMuOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMjkuOSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjYxLjAiIGN5PSIxOTUuMCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDYxLjAgMTk1LjApIi8+CjxlbGxpcHNlIGN4PSI0My4wIiBjeT0iMTk1LjAiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDQzLjAgMTk1LjApIi8+CjxwYXRoIGQ9Ik0xNDguMCAzMC4wIEwxNjEuMSA1MS4yIEwxNzAuNSA3Mi41IEwxNzYuMSA5My44IEwxNzguMCAxMTUuMCBMMTc2LjEgMTM2LjIgTDE3MC41IDE1Ny41IEwxNjEuMSAxNzguOCBMMTQ4LjAgMjAwLjAiIHN0cm9rZS13aWR0aD0iMS40Ii8+CjxlbGxpcHNlIGN4PSIxNTIuMSIgY3k9IjQ2LjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDE1Mi4xIDQ2LjIpIi8+CjxlbGxpcHNlIGN4PSIxNzAuMSIgY3k9IjQ2LjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAxNzAuMSA0Ni4yKSIvPgo8ZWxsaXBzZSBjeD0iMTYxLjUiIGN5PSI2Ny41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAxNjEuNSA2Ny41KSIvPgo8ZWxsaXBzZSBjeD0iMTc5LjUiIGN5PSI2Ny41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgMTc5LjUgNjcuNSkiLz4KPGVsbGlwc2UgY3g9IjE2Ny4xIiBjeT0iODguOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTY3LjEgODguOCkiLz4KPGVsbGlwc2UgY3g9IjE4NS4xIiBjeT0iODguOCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDE4NS4xIDg4LjgpIi8+CjxlbGxpcHNlIGN4PSIxNjkuMCIgY3k9IjExMC4wIiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAxNjkuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjE4Ny4wIiBjeT0iMTEwLjAiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAxODcuMCAxMTAuMCkiLz4KPGVsbGlwc2UgY3g9IjE2Ny4xIiBjeT0iMTMxLjIiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDE2Ny4xIDEzMS4yKSIvPgo8ZWxsaXBzZSBjeD0iMTg1LjEiIGN5PSIxMzEuMiIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDE4NS4xIDEzMS4yKSIvPgo8ZWxsaXBzZSBjeD0iMTYxLjUiIGN5PSIxNTIuNSIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoMzUgMTYxLjUgMTUyLjUpIi8+CjxlbGxpcHNlIGN4PSIxNzkuNSIgY3k9IjE1Mi41IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzUgMTc5LjUgMTUyLjUpIi8+CjxlbGxpcHNlIGN4PSIxNTIuMSIgY3k9IjE3My44IiByeD0iMTAiIHJ5PSI0IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAxNTIuMSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjE3MC4xIiBjeT0iMTczLjgiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAxNzAuMSAxNzMuOCkiLz4KPGVsbGlwc2UgY3g9IjEzOS4wIiBjeT0iMTk1LjAiIHJ4PSIxMCIgcnk9IjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDEzOS4wIDE5NS4wKSIvPgo8ZWxsaXBzZSBjeD0iMTU3LjAiIGN5PSIxOTUuMCIgcng9IjEwIiByeT0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1IDE1Ny4wIDE5NS4wKSIvPgo8L3N2Zz4="
+            alt="Victory College crest"
+          /><span
+            ><b>Victory College, Ikare Akoko</b
+            ><small>80TH ANNIVERSARY</small></span
+          ></a
+        >
+        <nav id="nav">
+          <a href="index.html">Home</a><a href="about.html">About</a
+          ><a href="sponsorship.html">Sponsorship</a
+          ><a href="donate.html" class="on">Donate</a
+          ><a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="phero">
+        <div class="wrap">
+          <div class="eyebrow">PLEDGE FORM</div>
+          <h1>Choose how you would like to support</h1>
+          <p>
+            Pick what you would like to support, tell us who you are, and set a
+            reminder. Our committee will contact you to confirm your pledge and
+            payment.
+          </p>
+        </div>
+      </div>
+      <section class="blk">
+        <div class="wrap" style="max-width: 640px">
+          <form id="pledgeForm" novalidate>
+            <div class="step" id="step1">STEP 1</div>
+            <h2 class="fh">What would you like to support?</h2>
+            <p class="alert" id="topMsg" role="alert" hidden>
+              Please pick a card to continue.
+            </p>
+            <div class="tabs" role="tablist" id="tabs">
+              <button
+                type="button"
+                class="tab"
+                role="tab"
+                data-p="levels"
+                aria-selected="true"
+              >
+                Sponsor levels
+              </button>
+              <button
+                type="button"
+                class="tab"
+                role="tab"
+                data-p="tables"
+                aria-selected="false"
+              >
+                Tables
+              </button>
+              <button
+                type="button"
+                class="tab"
+                role="tab"
+                data-p="items"
+                aria-selected="false"
+              >
+                Event items
+              </button>
+              <button
+                type="button"
+                class="tab"
+                role="tab"
+                data-p="other"
+                aria-selected="false"
+              >
+                Other
+              </button>
+            </div>
+            <div class="tiles" id="levels"></div>
+            <div class="tiles" id="tables" hidden></div>
+            <div class="tiles" id="items" hidden></div>
+            <div class="tiles" id="other" hidden></div>
+            <div class="chosenrow">
+              <p class="chosen" id="chosen">Nothing selected yet</p>
+              <button type="button" class="btn out clr" id="clear" hidden>
+                Cancel selection
+              </button>
+            </div>
+
+            <div class="fs">
+              <div class="step">STEP 2</div>
+              <h2 class="fh">Your details</h2>
+              <div class="two">
+                <div>
+                  <label class="f" for="name">Full name *</label
+                  ><input
+                    type="text"
+                    id="name"
+                    name="Full name"
+                    autocomplete="name"
+                  />
+                </div>
+                <div>
+                  <label class="f" for="org"
+                    >Organisation or set (optional)</label
+                  ><input type="text" id="org" name="Organisation or set" />
+                </div>
+              </div>
+              <div class="two">
+                <div>
+                  <label class="f" for="phone">Phone number *</label
+                  ><input
+                    type="tel"
+                    id="phone"
+                    name="Phone"
+                    placeholder="+234 ..."
+                    autocomplete="tel"
+                  />
+                </div>
+                <div>
+                  <label class="f" for="email">Email address</label
+                  ><input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+              <div class="two">
+                <div>
+                  <label class="f" for="amount">Pledge amount (₦)</label
+                  ><input
+                    type="text"
+                    id="amount"
+                    name="Amount"
+                    inputmode="numeric"
+                    placeholder="e.g. 500,000"
+                  />
+                </div>
+                <div></div>
+              </div>
+              <label class="f" for="message"
+                >Message or special instructions</label
+              ><textarea id="message" name="Message"></textarea>
+            </div>
+
+            <div class="fs">
+              <div class="step">STEP 3</div>
+              <h2 class="fh">Set a reminder</h2>
+              <p class="hint">
+                Paying later is fine. Tell us when to remind you and we will add
+                it to your calendar after you submit.
+              </p>
+              <label class="chk"
+                ><input type="checkbox" id="remind" /> Remind me to complete my
+                payment</label
+              >
+              <div id="remBox" hidden style="margin-top: 14px">
+                <label class="f" for="remDate">Reminder date</label
+                ><input
+                  type="date"
+                  id="remDate"
+                  style="
+                    max-width: 240px;
+                    width: 100%;
+                    border: 1px solid var(--line);
+                    border-radius: 3px;
+                    padding: 10px 12px;
+                    font:
+                      14px Karla,
+                      sans-serif;
+                  "
+                />
+              </div>
+            </div>
+
+            <div class="fs">
+              <div class="step">PAYMENT</div>
+              <h2 class="fh">Bank details</h2>
+              <div class="bank">
+                <span class="eyebrow">BANK DETAILS</span>
+                <h3>[Bank name to be confirmed]</h3>
+                <p>[Account name to be confirmed]</p>
+                <strong>[Account number to be confirmed]</strong
+                ><button
+                  type="button"
+                  class="btn out"
+                  id="copyBank"
+                  style="border-color: #b9c3e3"
+                >
+                  Copy account details
+                </button>
+              </div>
+              <div class="dl">
+                <b>Donation deadline:</b> [Donation deadline to be confirmed]
+              </div>
+              <p class="hint">
+                Please use your full name as the payment reference.
+              </p>
+            </div>
+
+            <div class="submit">
+              <button class="btn" type="submit" id="go">Submit pledge</button>
+              <p class="note">
+                Fields marked * are required. Your pledge is confirmed only
+                after the committee contacts you.
+              </p>
+              <div id="msg" role="status"></div>
+            </div>
+          </form>
+
+          <div class="thanks" id="thanks" hidden tabindex="-1">
+            <h2>Thank you, <span id="tName"></span></h2>
+            <p class="hint" style="margin-top: 8px">
+              Your pledge has been received and sent to the fundraising
+              committee. They will contact you shortly to confirm.
+            </p>
+            <div class="sum" id="tSum"></div>
+            <div class="btns" style="margin-top: 22px">
+              <a class="btn" href="#" id="remIcs" hidden
+                >Download my payment reminder</a
+              ><a
+                class="btn out"
+                style="border-color: var(--navy)"
+                href="#"
+                id="remG"
+                target="_blank"
+                rel="noopener"
+                hidden
+                >Add payment reminder to Google Calendar</a
+              >
+            </div>
+            <div class="btns" style="margin-top: 12px">
+              <a
+                class="btn out"
+                style="border-color: var(--navy)"
+                href="#"
+                data-ics
+                >Add the luncheon to my calendar</a
+              ><a
+                class="btn out"
+                style="border-color: var(--navy)"
+                data-gcal
+                target="_blank"
+                rel="noopener"
+                href="#"
+                >Luncheon on Google Calendar</a
+              >
+            </div>
+            <p style="margin-top: 24px">
+              <a class="link" href="index.html">Back to home</a>
+            </p>
+          </div>
+
+          <div class="talk">
+            <h3>Prefer to talk to us first?</h3>
+            <p>+234 803 462 1025</p>
+            <p>+234 803 595 0857</p>
+            <p>+234 803 328 7535</p>
+            <p>abdulrafiu.badru@matrixenergygroup.com</p>
+            <p>femioyewole4@yahoo.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>
+          <h4>Victory College, Ikare Akoko</h4>
+          <p>80 Years of Excellence, Character and Service.</p>
+        </div>
+        <div>
+          <small>THE LUNCHEON</small
+          ><a style="font-weight: 700">Sunday, 8 November 2026</a>
+          <p>White Stone Event Centre, Oregun, Ikeja, Lagos</p>
+        </div>
+        <div>
+          <small>FUNDRAISING COMMITTEE</small
+          ><a href="tel:+2348034621025">+234 803 462 1025</a
+          ><a href="tel:+2348035950857">+234 803 595 0857</a
+          ><a href="tel:+2348033287535">+234 803 328 7535</a
+          ><a href="mailto:abdulrafiu.badru@matrixenergygroup.com"
+            >abdulrafiu.badru@matrixenergygroup.com</a
+          ><a href="mailto:femioyewole4@yahoo.com">femioyewole4@yahoo.com</a>
+        </div>
+        <div class="copy">
+          © 2026 Victory College Old Students 80th Anniversary Committee
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Emails that receive every pledge
+      const CATS = [
+        ["Platinum Sponsor", "₦10,000,000 and above"],
+        ["Gold Sponsor", "₦5,000,000 to ₦9,990,000"],
+        ["Silver Sponsor", "₦2,000,000 to ₦4,990,000"],
+        ["Bronze Sponsor", "₦1,000,000 to ₦1,990,000"],
+        ["Super Supporter", "₦500,000 to ₦999,000"],
+        ["Superior Friends", "₦250,000 to ₦499,000"],
+        ["Friends of Victory College", "Below ₦249,000"],
+      ];
+      const TABLES = [
+        ["Premium Table", "₦1,000,000", "10 seats"],
+        ["Gold Table", "₦500,000", "6 seats"],
+        ["Standard Table", "₦250,000", "4 seats"],
+      ];
+      const ASPECTS = [
+        "Venue",
+        "Catering",
+        "Event branding and decoration",
+        "Photography and videography",
+        "Printing and programme materials",
+        "Souvenirs and gift items",
+        "Publicity and media",
+        "Transportation and logistics",
+        "Audio visual and technical support",
+      ];
+      const $ = (s, r = document) => r.querySelector(s),
+        $$ = (s, r = document) => [...r.querySelectorAll(s)];
+      const set = (s, v) => {
+        const e = document.querySelector(s);
+        if (e) e.innerHTML = v;
+      };
+      const opt = (v, t, s) =>
+        `<label class="opt"><span>${t}${s ? `<small>${s}</small>` : ""}</span><input type="radio" name="category" value="${v}"><i></i></label>`;
+      $$("[data-cats]").forEach(
+        (e) =>
+          (e.innerHTML = CATS.map(
+            (c) => `<div><b>${c[0]}</b><span>${c[1]}</span></div>`,
+          ).join("")),
+      );
+      set(
+        "[data-table]",
+        CATS.map(
+          (c) =>
+            `<div><b>${c[0]}</b><span>${c[1].replace("Below", "Below")}</span></div>`,
+        ).join(""),
+      );
+      set(
+        "[data-tables]",
+        TABLES.map(
+          (t) =>
+            `<div class="card"><h3 style="font-size:22px">${t[0]}</h3>${t[1]} · ${t[2]}</div>`,
+        ).join(""),
+      );
+      set("[data-pills]", ASPECTS.map((a) => `<span>${a}</span>`).join(""));
+      set(
+        "[data-opts=cats]",
+        CATS.map((c) => opt(c[0] + " (" + c[1] + ")", c[0], c[1])).join(""),
+      );
+      set(
+        "[data-opts=tables]",
+        TABLES.map((t) =>
+          opt(
+            t[0] + " (" + t[1] + ", " + t[2] + ")",
+            t[0],
+            t[1] + " · " + t[2],
+          ),
+        ).join(""),
+      );
+      set(
+        "[data-opts=aspects]",
+        ASPECTS.map((a) => opt("Underwrite: " + a, a)).join(""),
+      );
+
+      // calendar
+      const pad = (n) => String(n).padStart(2, "0");
+      // 12:00 noon Lagos (WAT, UTC+1) = 11:00 UTC
+      const S = "20261108T110000Z",
+        E = "20261108T140000Z",
+        LOC = "White Stone Event Centre, Oregun, Ikeja, Lagos",
+        T = "Victory College, Ikare Akoko 80th Anniversary Luncheon";
+      $$("[data-gcal]").forEach(
+        (a) =>
+          (a.href =
+            "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" +
+            encodeURIComponent(T) +
+            "&dates=" +
+            S +
+            "/" +
+            E +
+            "&location=" +
+            encodeURIComponent(LOC) +
+            "&details=" +
+            encodeURIComponent("80 Years of Legacy. One Future.")),
+      );
+      $$("[data-ics]").forEach((a) =>
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const ics = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:VC80",
+            "BEGIN:VEVENT",
+            "UID:vc80luncheon@victorycollege",
+            "DTSTAMP:20260930T000000Z",
+            "DTSTART:" + S,
+            "DTEND:" + E,
+            "SUMMARY:" + T,
+            "LOCATION:" + LOC,
+            "BEGIN:VALARM",
+            "TRIGGER:-P1D",
+            "ACTION:DISPLAY",
+            "DESCRIPTION:Luncheon tomorrow",
+            "END:VALARM",
+            "END:VEVENT",
+            "END:VCALENDAR",
+          ].join("\r\n");
+          const l = document.createElement("a");
+          l.href = URL.createObjectURL(
+            new Blob([ics], { type: "text/calendar" }),
+          );
+          l.download = "VC80 Luncheon.ics";
+          l.click();
+        }),
+      );
+
+      $("#copyBank") &&
+        ($("#copyBank").onclick = (e) => {
+          navigator.clipboard &&
+            navigator.clipboard.writeText($(".bank").innerText);
+          e.target.textContent = "Copied";
+        });
+    </script>
+    <script>
+      // Pledge form: choose a category, leave details, set a reminder, send to the committee emails
+      (() => {
+        // WHERE PLEDGES GO: paste one Web3Forms access key per receiving inbox. Keys hide the email address from visitors.
+        const KEYS = ["PASTE_ACCESS_KEY_HERE"];
+        // GOOGLE SHEET COPY (optional): paste your Apps Script web app link between the quotes, or leave empty
+        const SHEET_URL = "";
+        const $ = (s) => document.querySelector(s);
+        const LEVELS = [
+          ["Platinum Sponsor", "₦10,000,000 and above", 10000000],
+          ["Gold Sponsor", "₦5,000,000 to ₦9,990,000", 5000000],
+          ["Silver Sponsor", "₦2,000,000 to ₦4,990,000", 2000000],
+          ["Bronze Sponsor", "₦1,000,000 to ₦1,990,000", 1000000],
+          ["Super Supporter", "₦500,000 to ₦999,000", 500000],
+          ["Superior Friends", "₦250,000 to ₦499,000", 250000],
+          ["Friends of Victory College", "Below ₦249,000", 0],
+        ];
+        const TABLES = [
+          ["Premium Table", "₦1,000,000 · 10 seats", 1000000],
+          ["Gold Table", "₦500,000 · 6 seats", 500000],
+          ["Standard Table", "₦250,000 · 4 seats", 250000],
+        ];
+        const ITEMS = [
+          "Venue",
+          "Catering",
+          "Event branding and decoration",
+          "Photography and videography",
+          "Printing and programme materials",
+          "Souvenirs and gift items",
+          "Publicity and media",
+          "Transportation and logistics",
+          "Audio visual and technical support",
+        ];
+        const tile = (v, t, s, a) =>
+          `<label class="tile"><input type="radio" name="Category" value="${v}" data-amt="${a || ""}"><b>${t}</b>${s ? `<small>${s}</small>` : ""}</label>`;
+        $("#levels").innerHTML = LEVELS.map((c) =>
+          tile(c[0] + " (" + c[1] + ")", c[0], c[1], c[2]),
+        ).join("");
+        $("#tables").innerHTML = TABLES.map((c) =>
+          tile(c[0] + " (" + c[1] + ")", c[0], c[1], c[2]),
+        ).join("");
+        $("#items").innerHTML = ITEMS.map((a) =>
+          tile("Underwrite: " + a, a, "Underwrite this part of the luncheon"),
+        ).join("");
+        $("#other").innerHTML = tile(
+          "Other, I would like to discuss my contribution",
+          "Other",
+          "I would like to discuss my contribution",
+        );
+
+        // tabs
+        document.querySelectorAll(".tab").forEach(
+          (b) =>
+            (b.onclick = () => {
+              document
+                .querySelectorAll(".tab")
+                .forEach((t) => t.setAttribute("aria-selected", t === b));
+              ["levels", "tables", "items", "other"].forEach(
+                (id) => ($("#" + id).hidden = id !== b.dataset.p),
+              );
+            }),
+        );
+
+        // choose a category, prefill amount
+        let autoAmt = true;
+        const fmt = (v) =>
+          String(v)
+            .replace(/\D/g, "")
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $("#amount").addEventListener("input", (e) => {
+          autoAmt = false;
+          e.target.value = fmt(e.target.value);
+        });
+        document.addEventListener("change", (e) => {
+          if (e.target.name === "Category") {
+            $("#chosen").textContent = "You chose: " + e.target.value;
+            $("#clear").hidden = false;
+            $("#topMsg").hidden = true;
+            const a = e.target.dataset.amt;
+            if (a && (autoAmt || !$("#amount").value)) {
+              $("#amount").value = fmt(a);
+              autoAmt = true;
+            }
+          }
+          if (e.target.id === "remind") $("#remBox").hidden = !e.target.checked;
+        });
+        $("#clear").onclick = () => {
+          document
+            .querySelectorAll("input[name=Category]")
+            .forEach((r) => (r.checked = false));
+          $("#chosen").textContent = "Nothing selected yet";
+          $("#clear").hidden = true;
+          if (autoAmt) $("#amount").value = "";
+        };
+        $("#copyBank").onclick = (e) => {
+          navigator.clipboard &&
+            navigator.clipboard.writeText($(".bank").innerText);
+          e.target.textContent = "Copied";
+        };
+
+        // reminder date limits: today until the luncheon
+        const today = new Date(),
+          iso = (d) => d.toISOString().slice(0, 10);
+        $("#remDate").min = iso(today);
+        $("#remDate").max = "2026-11-08";
+
+        const nextDay = (s) => {
+          const d = new Date(s + "T00:00:00Z");
+          d.setUTCDate(d.getUTCDate() + 1);
+          return iso(d).replace(/-/g, "");
+        };
+        function reminder(name, cat, amt, date) {
+          const t = "Pay pledge: Victory College 80th Anniversary",
+            d = date.replace(/-/g, ""),
+            n = nextDay(date);
+          const det =
+            name +
+            " | " +
+            cat +
+            (amt ? " | ₦" + amt : "") +
+            " | Bank details will be sent by the committee.";
+          $("#remG").href =
+            "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" +
+            encodeURIComponent(t) +
+            "&dates=" +
+            d +
+            "/" +
+            n +
+            "&details=" +
+            encodeURIComponent(det);
+          const ics = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:VC80",
+            "BEGIN:VEVENT",
+            "UID:vc80pay" + Date.now() + "@victorycollege",
+            "DTSTAMP:" + new Date().toISOString().replace(/[-:]|\.\d+/g, ""),
+            "DTSTART;VALUE=DATE:" + d,
+            "DTEND;VALUE=DATE:" + n,
+            "SUMMARY:" + t,
+            "DESCRIPTION:" + det,
+            "BEGIN:VALARM",
+            "TRIGGER;RELATED=START:PT9H",
+            "ACTION:DISPLAY",
+            "DESCRIPTION:Pay your pledge",
+            "END:VALARM",
+            "END:VEVENT",
+            "END:VCALENDAR",
+          ].join("\r\n");
+          const url = URL.createObjectURL(
+            new Blob([ics], { type: "text/calendar" }),
+          );
+          const a = $("#remIcs");
+          a.href = url;
+          a.download = "Payment reminder.ics";
+          a.hidden = false;
+          $("#remG").hidden = false;
+        }
+
+        // submit
+        $("#pledgeForm").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const f = e.target,
+            m = $("#msg"),
+            b = $("#go");
+          m.className = "";
+          m.style.display = "";
+          $("#topMsg").hidden = true;
+          const cat =
+            (f.querySelector("input[name=Category]:checked") || {}).value || "";
+          const name = $("#name").value.trim(),
+            phone = $("#phone").value.trim(),
+            remOn = $("#remind").checked,
+            rd = $("#remDate").value;
+          const bad = (x) => {
+            m.className = "bad";
+            m.textContent = x;
+            m.scrollIntoView({ behavior: "smooth", block: "center" });
+          };
+          if (!cat) {
+            $("#topMsg").hidden = false;
+            bad("Please pick a card in Step 1 before submitting.");
+            $("#step1").scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
+          }
+          if (!name || !phone) {
+            bad("Please enter your full name and phone number.");
+            const fld = !name ? $("#name") : $("#phone");
+            fld.scrollIntoView({ behavior: "smooth", block: "center" });
+            fld.focus({ preventScroll: true });
+            return;
+          }
+          if (remOn && !rd) {
+            bad("Please pick a reminder date, or untick the reminder.");
+            $("#remDate").scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+            $("#remDate").focus({ preventScroll: true });
+            return;
+          }
+          const amt = $("#amount").value.trim();
+          const rows = [
+            ["Category", cat],
+            ["Amount", "₦" + (amt || "to be discussed")],
+            ["Full name", name],
+            ["Organisation or set", $("#org").value.trim()],
+            ["Phone", phone],
+            ["Email", $("#email").value.trim()],
+            ["Message", $("#message").value.trim()],
+            ["Payment reminder", remOn ? rd : "None"],
+          ];
+          if (!KEYS.length || KEYS.some((k) => !k || /PASTE/i.test(k))) {
+            console.error(
+              "Form not connected: put your Web3Forms access key(s) in KEYS in the pledge form script.",
+            );
+            return bad(
+              "This form is not connected yet. Please call the committee on +234 803 462 1025 to make your pledge.",
+            );
+          }
+          const payload = {
+            subject: "New pledge: " + name + " | " + cat,
+            from_name: "Victory College 80th Anniversary Pledge Form",
+          };
+          rows.forEach((r) => (payload[r[0]] = r[1] || "None"));
+          if ($("#email").value.trim())
+            payload.replyto = $("#email").value.trim();
+          if (SHEET_URL)
+            fetch(SHEET_URL, {
+              method: "POST",
+              mode: "no-cors",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify(
+                Object.fromEntries(rows.map((r) => [r[0], r[1] || "None"])),
+              ),
+            }).catch((err) => console.warn("Sheet save failed:", err));
+          b.disabled = true;
+          b.textContent = "Sending";
+          m.className = "ok";
+          m.textContent = "Sending your pledge, please wait...";
+          try {
+            const ctl = new AbortController();
+            const to = setTimeout(() => ctl.abort(), 20000);
+            const res = await Promise.all(
+              KEYS.map((k) =>
+                fetch("https://api.web3forms.com/submit", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                  },
+                  body: JSON.stringify({ ...payload, access_key: k }),
+                  signal: ctl.signal,
+                })
+                  .then((r) => r.json())
+                  .catch((err) => ({ success: false, message: String(err) })),
+              ),
+            );
+            clearTimeout(to);
+            console.log("Form responses:", res);
+            if (!res.some((j) => j.success))
+              throw new Error((res[0] && res[0].message) || "Send failed");
+            const shown = rows.filter((r) => r[1] && r[1] !== "None");
+            $("#tName").textContent = name.split(" ")[0];
+            $("#tSum").innerHTML = shown
+              .map((r) => `<div><span>${r[0]}</span><b></b></div>`)
+              .join("");
+            [...$("#tSum").children].forEach(
+              (el, i) => (el.lastChild.textContent = shown[i][1]),
+            );
+            if (remOn) reminder(name, cat, amt, rd);
+            m.className = "";
+            f.hidden = true;
+            const t = $("#thanks");
+            t.hidden = false;
+            t.focus();
+            t.scrollIntoView({ behavior: "smooth", block: "start" });
+          } catch (x) {
+            console.error("Pledge failed:", x);
+            bad(
+              "We could not send your pledge. Please try again, or call the committee on +234 803 462 1025.",
+            );
+          }
+          b.disabled = false;
+          b.textContent = "Submit pledge";
+        });
+      })();
+    </script>
+  </body>
+</html>
