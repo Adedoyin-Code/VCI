@@ -69,9 +69,9 @@ set(
 
 // calendar
 const pad = (n) => String(n).padStart(2, "0");
-// 12:00 noon Lagos (WAT, UTC+1) = 11:00 UTC
-const S = "20261108T110000Z",
-  E = "20261108T140000Z",
+// 2:00 pm Lagos (WAT, UTC+1) = 13:00 UTC
+const S = "20261108T130000Z",
+  E = "20261108T150000Z",
   LOC = "White Stone Event Centre, Oregun, Ikeja, Lagos",
   T = "Victory College, Ikare Akoko 80th Anniversary Luncheon";
 $$("[data-gcal]").forEach(
@@ -168,9 +168,9 @@ $$("[data-prog-ics]").forEach((a) =>
 );
 
 // countdowns (Lagos time, UTC+1)
-// 1) Fundraising luncheon: Sunday 8 November 2026, 12:00 noon
+// 1) Fundraising luncheon: Sunday 8 November 2026, 2:00 pm
 // 2) Programme: 21 to 27 February 2027. Shows the dates first; from 21 February a countdown to the end of the programme starts
-const LUNCH = new Date("2026-11-08T12:00:00+01:00"),
+const LUNCH = new Date("2026-11-08T14:00:00+01:00"),
   P_START = new Date("2027-02-21T00:00:00+01:00"),
   P_END = new Date("2027-02-28T00:00:00+01:00");
 function boxes(ms) {
