@@ -1,5 +1,5 @@
 const CATS = [
-  ["Platinum Sponsor", "₦10,000,000 and above"],
+  ["Platinum Sponsor", "₦10,000,000 and ₦250,000,000"],
   ["Gold Sponsor", "₦5,000,000 to ₦9,990,000"],
   ["Silver Sponsor", "₦2,000,000 to ₦4,990,000"],
   ["Bronze Sponsor", "₦1,000,000 to ₦1,990,000"],

@@ -1212,6 +1212,31 @@
           transition: none;
         }
       }
+
+      /* amount and category mismatch hint */
+      .amthint {
+        margin-top: 10px;
+        padding: 12px 14px;
+        border: 1px solid var(--navy);
+        border-left: 5px solid var(--navy);
+        background: var(--mist);
+        border-radius: 4px;
+        font-size: 16px;
+        color: var(--navy);
+      }
+      .amthint button {
+        margin-top: 8px;
+        display: block;
+        border: 1px solid var(--navy);
+        background: #fff;
+        color: var(--navy);
+        padding: 8px 14px;
+        border-radius: 4px;
+        font:
+          700 15px "Karla",
+          sans-serif;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -1251,7 +1276,7 @@
           <div class="eyebrow">DONATION FORM</div>
           <h1>Choose how you would like to support</h1>
           <p>
-            Pick what you would like to support, tell us about yourself, and set a
+            Pick what you would like to support, tell us who you are, and set a
             reminder. Our committee will contact you to confirm your donation
             and payment.
           </p>
@@ -1364,6 +1389,7 @@
                     inputmode="numeric"
                     placeholder="e.g. 500,000"
                   />
+                  <p class="amthint" id="amtHint" role="status" hidden></p>
                 </div>
                 <div></div>
               </div>
@@ -1415,7 +1441,9 @@
                 <div class="brow">
                   <span>Bank</span><b>First Bank Nigeria PLC</b>
                 </div>
-           
+                <div class="brow">
+                  <span>Amount</span><b id="bankAmt">To be agreed</b>
+                </div>
                 <button type="button" class="btn light" id="copyBank">
                   Copy account details
                 </button>
@@ -1442,8 +1470,10 @@
           <div class="thanks" id="thanks" hidden tabindex="-1">
             <h2>Thank you, <span id="tName"></span></h2>
             <p class="hint" style="margin-top: 8px">
-              Your donation has been received and sent to the fundraising
-              committee. They will contact you shortly to confirm.
+              We have received your details and sent them to the fundraising
+              committee, who will contact you shortly. Your donation is marked
+              as paid once your transfer reaches the account below and the
+              committee confirms it.
             </p>
             <div class="sum" id="tSum"></div>
             <div class="paynote">
@@ -1548,7 +1578,7 @@
     ></a>
     <script>
       const CATS = [
-        ["Platinum Sponsor", "₦10,000,000 and above"],
+        ["Platinum Sponsor", "₦10,000,000 and ₦250,000,000"],
         ["Gold Sponsor", "₦5,000,000 to ₦9,990,000"],
         ["Silver Sponsor", "₦2,000,000 to ₦4,990,000"],
         ["Bronze Sponsor", "₦1,000,000 to ₦1,990,000"],
@@ -1817,7 +1847,9 @@
       // Donation form: choose a category, leave details, set a reminder, send to the committee emails
       (() => {
         // WHERE DONATIONS GO: paste one Web3Forms access key per receiving inbox. Keys hide the email address from visitors.
-        const KEYS = ["3f7271d9-ea62-4ff0-9d83-36c1755f774c"];
+        // Email is switched OFF. To switch it back on, replace the next line with:
+        // const KEYS=["3f7271d9-ea62-4ff0-9d83-36c1755f774c"];
+        const KEYS = [];
         // GOOGLE SHEET + EMAIL (optional): paste your Apps Script web app link between the quotes. It saves each donation to a sheet and emails the committee, no inbox access needed
         const SHEET_URL = "";
         // FIREBASE (database for the admin dashboard): paste the same config you use in the admin site
@@ -1851,7 +1883,7 @@
         }
         const $ = (s) => document.querySelector(s);
         const LEVELS = [
-          ["Platinum Sponsor", "₦10,000,000 and above", 10000000],
+          ["Platinum Sponsor", "₦10,000,000 and ₦250,000,000", 10000000],
           ["Gold Sponsor", "₦5,000,000 to ₦9,990,000", 5000000],
           ["Silver Sponsor", "₦2,000,000 to ₦4,990,000", 2000000],
           ["Bronze Sponsor", "₦1,000,000 to ₦1,990,000", 1000000],
@@ -1923,6 +1955,49 @@
           e.target.value = fmt(e.target.value);
         });
         $("#amount").addEventListener("input", syncAmt);
+        // warn when the typed amount belongs to a different supporter level than the card chosen
+        function checkAmt() {
+          const hint = $("#amtHint");
+          if (!hint) return;
+          const n = parseInt($("#amount").value.replace(/\D/g, ""), 10);
+          const ch = document.querySelector("input[name=Category]:checked"),
+            val = ch ? ch.value : "";
+          const cur = LEVELS.find((l) => val.startsWith(l[0] + " ("));
+          const right = cur && n > 0 ? LEVELS.find((l) => n >= l[2]) : null;
+          if (!cur || !right || right[0] === cur[0]) {
+            hint.hidden = true;
+            return;
+          }
+          hint.textContent =
+            "₦" +
+            n.toLocaleString("en-NG") +
+            " is in the " +
+            right[0] +
+            " range (" +
+            right[1] +
+            "), but you chose " +
+            cur[0] +
+            ". ";
+          const b = document.createElement("button");
+          b.type = "button";
+          b.textContent = "Switch to " + right[0];
+          b.onclick = () => {
+            const r = [
+              ...document.querySelectorAll("input[name=Category]"),
+            ].find((x) => x.value === right[0] + " (" + right[1] + ")");
+            if (r) {
+              r.checked = true;
+              r.dispatchEvent(new Event("change", { bubbles: true }));
+            }
+          };
+          hint.appendChild(b);
+          hint.hidden = false;
+        }
+        $("#amount").addEventListener("input", checkAmt);
+        document.addEventListener("change", (e) => {
+          if (e.target.name === "Category") checkAmt();
+        });
+        $("#clear").addEventListener("click", checkAmt);
         document.addEventListener("change", (e) => {
           if (e.target.name === "Category") {
             $("#chosen").textContent = "You chose: " + e.target.value;
